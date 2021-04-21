@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-url = ""
+print('Enter an url with beautiful images:')
+url = input()
 page = requests.get(url)
 souped = BeautifulSoup(page.content, "html.parser")
 imgs = souped.find_all("img")
