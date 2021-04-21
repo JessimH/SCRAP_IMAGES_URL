@@ -2,7 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 from tqdm import tqdm
 
-page = requests.get("https://www.lafermeducbd.fr/vaporisateurs/")
+url = ""
+page = requests.get(url)
 souped = BeautifulSoup(page.content, "html.parser")
 imgs = souped.find_all("img")
 imgs = imgs[3:-1]
